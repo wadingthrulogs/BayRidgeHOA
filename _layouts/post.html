@@ -1,0 +1,24 @@
+---
+layout: default
+---
+<div class="container page-content">
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">{{ page.title }}</h1>
+      <p class="post-meta">
+        Meeting Date: <time datetime="{{ page.date | date_to_xmlschema }}">
+          {{ page.date | date: "%B %d, %Y" }}
+        </time>
+        {% if page.attendees %}
+          &mdash; Attendees: {{ page.attendees }}
+        {% endif %}
+      </p>
+    </header>
+    <div class="post-content">
+      {{ content }}
+    </div>
+    <div class="post-nav">
+      <a href="{{ '/meeting-notes/' | relative_url }}">&larr; All Meeting Notes</a>
+    </div>
+  </article>
+</div>

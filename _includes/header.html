@@ -1,0 +1,21 @@
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <a class="site-title" href="{{ '/' | relative_url }}">
+        <span class="site-title-main">BayRidge HOA</span>
+        <span class="site-title-sub">San Diego</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="site-nav">
+        {% for item in site.nav %}
+          <a href="{{ item.url | relative_url }}"
+             class="nav-link{% if page.url == item.url %} active{% endif %}">
+            {{ item.title }}
+          </a>
+        {% endfor %}
+      </nav>
+    </div>
+  </div>
+</header>

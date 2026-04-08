@@ -1,0 +1,35 @@
+title: "BayRidge HOA"
+description: "A hidden gem close to everything. — BayRidge HOA, San Diego"
+baseurl: "/BayRidgeHOA"
+url: "https://wadingthrulogs.github.io"
+
+markdown: kramdown
+highlighter: rouge
+permalink: /meeting-notes/:year/:month/:day/:title/
+
+show_drafts: false
+future: false
+unpublished: false
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor/
+  - .bundle/
+
+nav:
+  - title: "Home"
+    url: "/"
+  - title: "Meeting Notes"
+    url: "/meeting-notes/"
+  - title: "Documents"
+    url: "/documents/"
+  - title: "Calendar"
+    url: "/calendar/"
+  - title: "Contact"
+    url: "/contact/"
